@@ -9,7 +9,18 @@
   --white: black;
   /* --max-width: 1200px; */
 }
+:root {
+  --navbar-height: 68px; /* Adjust this value to match the height of your fixed navbar */
+}
 
+header, .section__container {
+  padding-top: var(--navbar-height); /* Add padding to avoid overlap */
+}
+
+/* Ensure all sections have sufficient top padding */
+section {
+  padding-top: calc(var(--navbar-height) + 20px); /* Adjust spacing if needed */
+}
 * {
   padding: 0;
   margin: 0;
