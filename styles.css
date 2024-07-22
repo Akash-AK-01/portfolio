@@ -345,7 +345,15 @@ nav {
   transition:1000ms ;
   
 } 
+.header {
+  margin-top: 1px;  
+  padding-top: 0;  
+}
 
+ 
+nav {
+  padding: 0.1rem; 
+}
 .service__card h4 {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
@@ -365,7 +373,17 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
+:root {
+  --navbar-height: 68px; /* Adjust this value to match the height of your fixed navbar */
+}
 
+header, .section__container {
+  padding-top: var(--navbar-height);  
+}
+ 
+section {
+  padding-top: calc(var(--navbar-height) + 20px); /* Adjust spacing if needed */
+}
 .resume__container .section__description {
   max-width: 600px;
   margin-inline: auto;
