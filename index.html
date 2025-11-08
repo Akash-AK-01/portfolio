@@ -14,7 +14,7 @@
   <nav>
     <div class="nav__header">
       <div class="nav__logo">
-        <a href="#" style="color: black;">Akash<span style="color:black;">.</span></a>
+        <a href="#">Akash<span>.</span></a>
       </div>
       <div class="nav__menu__btn" id="menu-btn">
         <i class="ri-menu-line"></i>
@@ -32,8 +32,8 @@
 
   <header class="header" id="home">
     <div class="section__container header__container">
-      <h4>Hello, I'm Akash</h4>
-      <h1>SoftwareDeveloper</h1>
+      <h4>Hello, I'm <span class="hero-name">Akash</span></h4>
+      <h1 class="typing-animation" id="typing-text"></h1>
       <div class="header__btns">
         <button class="btn btn__primary" id="download-cv">Download CV</button>
         <a href="#contact" class="btn">Contact Me</a>
@@ -43,27 +43,27 @@
         
   <section class="section__container about__container" id="about">
     <div class="about__image">
-      <img src="assets/Ak img.jpg" alt="about" />
+      <img src="assets/mine.jpg" alt="about" />
     </div>
     <div class="about__content">
       <h2 class="about__heading">About Me</h2>
       <h4>Let's Introduce Myself</h4>
       <div class="about">
-        <p>Name: Akash K</p>
-        <p>Birthday: 27.09.2003</p>
-        <p>Degree: BE Electronics and Communication Engineering</p>
-        <p>Email: akashak270903@gmail.com</p>
-        <p>Phone: +91 6380886354</p>
+        <p><span class="label">Name:</span> Akash K</p>
+        <p><span class="label">Birthday:</span> 27.09.2003</p>
+        <p><span class="label">Degree:</span> BE Electronics and Communication Engineering</p>
+        <p><span class="label">Email:</span> akashak270903@gmail.com</p>
+        <p><span class="label">Phone:</span> +91 6380886354</p>
       </div><br>
       <p class="section__description">
-           "I’m an enthusiastic developer who enjoys crafting user-friendly and visually engaging digital experiences.
+            I'm an enthusiastic developer who enjoys crafting user-friendly and visually engaging digital experiences.
             I love solving problems through code and continuously expanding my skills to build impactful projects.
             My journey in technology is fueled by curiosity, creativity, and a passion for learning.
       </p>
     </div>
   </section>
 
-  <section class="  resume__container" id="education">
+  <section class="resume__container" id="education">
     <h2 class="section__header">Education</h2><br>
     <div class="resume__tabs">
       <div class="resume__tablist">
@@ -73,7 +73,7 @@
               <span><i class="ri-graduation-cap-fill"></i></span>
               <h4>Bachelor's of Engineering</h4>
               <p class="section__description">Hindusthan Institute of Technology</p>
-              <p class="section__description">CGPA: 7.9 up to the current semester</p>
+              <p class="section__description">CGPA: 7.9 </p>
             </div>
             <div class="panel__card">
               <span><i class="ri-graduation-cap-fill"></i></span>
@@ -85,16 +85,16 @@
             </div>
             <div class="panel__card">
               <span><i class="ri-graduation-cap-fill"></i></span>
-              <h4>Higher Secondary</h4>
-              <p class="section__description">PACM Hr Sec School</p>
-              <p class="section__description">Percentage: 74%</p>
+              <h4>Intern in Fullstack Development</h4>
+              <p class="section__description">BesantTechnologies</p>
+              <p class="section__description">Mar 2025 | Bangalore</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <!-- skills section -->
   <section class="section__container service__container" id="skills">
     <h2 class="section__header">Skills</h2><br>
     <div class="service__grid">
@@ -116,10 +116,11 @@
           <h4>JavaScript</h4>
         </div>
       </div>
+
       <div class="service__card">
-        <img src="assets/java.png" style="height: 55px; width: 50px;">
+        <img src="assets/react.png" style="height: 55px; width: 50px;">
         <div>
-          <h4>Java</h4>
+          <h4>React</h4>
         </div>
       </div>
       <div class="service__card">
@@ -136,9 +137,9 @@
         </div>
       </div>
       <div class="service__card">
-        <img src="assets/jq.png" style="height: 45px; width: 45px;">
+        <img src="assets/Api.png" style="height: 45px; width: 45px;">
         <div>
-          <h4>Jquery</h4>
+          <h4>Api</h4>
         </div>
       </div>
       <div class="service__card">
@@ -156,6 +157,41 @@
       </div>
     </div>
   </section>
+
+  <!-- project section -->
+  <section class="section__container projects__container" id="projects">
+    <h2 class="section__header">Projects</h2><br>
+    <div class="projects__grid">
+      <div class="project__card">
+        <h4>Portfolio Website</h4>
+        <p class="section__description">A responsive personal portfolio website showcasing skills, projects, and contact information. Built with HTML, CSS, and JavaScript.</p>
+        <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+        <div class="project__links">
+          <a href="https://github.com/Akash-AK-01/portfolio" target="_blank" class="btn">View Code</a>
+          <a href="#" class="btn btn__primary">Live Demo</a>
+        </div>
+      </div>
+      <div class="project__card">
+        <h4>ClassBookings</h4>
+        <p class="section__description">A full-stack web application to manage class scheduling and student bookings. Features secure authentication, real-time updates, and booking management.</p>
+        <p><strong>Technologies:</strong> React, FastAPI, PostgreSQL, Tailwind CSS, JWT</p>
+        <div class="project__links">
+          <a href="https://github.com/Akash-AK-01/classBooking" target="_blank" class="btn">View Code</a>
+          <a href="https://class-booking-five.vercel.app/" target="_blank" class="btn btn__primary">Live Demo</a>
+        </div>
+      </div>
+      <div class="project__card">
+        <h4>Organic Farming Web Application</h4>
+        <p class="section__description">An online platform connecting organic farmers with customers for selling organic products,online payment gateway integration for seamless transactions.</p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python, MySQL</p>
+        <div class="project__links">
+          <a href="https://github.com/Akash-AK-01/organic-farming" target="_blank" class="btn">View Code</a>
+          <a href="#" class="btn btn__primary">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact section -->
 <center>
   <footer class="footer" id="contact">
     <div class="section__container footer__container">

@@ -18,7 +18,7 @@ const downloadCv = document.getElementById("download-cv");
 
 downloadCv.addEventListener("click", (e) => {
   e.preventDefault();
-  window.open("resume3 .pdf", "_blank");
+  window.open("AKASH.M.pdf", "_blank");
 });
 
 const scrollRevealOption = {
@@ -40,7 +40,7 @@ ScrollReveal().reveal(".header__container .section__description", {
 });
 ScrollReveal().reveal(".header__container .header__btns", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1000,
 });
 
 const progressBar = document.querySelectorAll(".about__progressbar");
@@ -141,4 +141,45 @@ document.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 });
+
+/* Typing animation for hero title */
+(() => {
+  const typingElement = document.getElementById('typing-text');
+  if (!typingElement) return;
+
+  const texts = ['Software Developer !', 'Freelancer', 'Full Stack Developer'];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function type() {
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+      typingElement.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typingElement.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 100;
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+      // Pause at end
+      typingSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      typingSpeed = 500;
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  // Start typing animation
+  type();
+})();
  
